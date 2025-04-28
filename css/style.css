@@ -3268,7 +3268,6 @@ body._touch .header .menu__list {
 .size-chart-table__head .size-chart-table__th p,
 .size-chart-table__head .size-chart-table__td p {
   font-size: 18px;
-  word-break: break-all;
   vertical-align: top;
 }
 
@@ -4167,6 +4166,7 @@ body._touch .header .menu__list {
   .size-chart-table__head .size-chart-table__th p,
   .size-chart-table__head .size-chart-table__td p {
     font-size: 16px;
+    word-break: break-all;
   }
 }
 
