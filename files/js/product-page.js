@@ -90,4 +90,23 @@ document.addEventListener('DOMContentLoaded', function() {
       });
    }
    /* <- действие по клику на кнопу Швидка покупка */
+
+
+   /* popup SPECIAL OFFER -> */
+   const popup = document.getElementById("popup-special-offer");
+   const daysToWait = 3; // ← тут можешь поменять число дней
+   const storageKey = "popupSpecialOfferLastShown";
+ 
+   if (!popup) return;
+ 
+   const lastShown = localStorage.getItem(storageKey);
+   const now = new Date().getTime();
+   const msInDay = 24 * 60 * 60 * 1000;
+ 
+   if (!lastShown || now - parseInt(lastShown, 10) > daysToWait * msInDay) {
+      popup.classList.add("open"); // Показываем попап
+      document.body.classList.add("_lock"); // Добавление класса _lock к body для блокировки скролла
+      localStorage.setItem(storageKey, now.toString()); // Обновляем время показа в кэше
+   }
+   /* <- popup SPECIAL OFFER */
 }); 
