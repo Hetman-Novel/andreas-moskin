@@ -205,4 +205,23 @@ document.addEventListener('DOMContentLoaded', function() {
    }
    /* <- Количество товаров в корзине (для иконка в шапке) */
 
+   /* Функция для отслеживания блока .popup-basket__complete-look (удаление в случае если все блоки popup-basket__product удалены) -> */
+   function trackCompleteLookBlock() {
+      const completeLookBlock = document.querySelector('.popup-basket__complete-look');
+      if (!completeLookBlock) return; // Если блока нет, прекращаем отслеживание
+      const observer = new MutationObserver(function() {
+         // Ищем все элементы с классом popup-basket__product внутри .popup-basket__complete-look
+         const productBlocks = completeLookBlock.querySelectorAll('.popup-basket__product');
+         if (productBlocks.length === 0) { // Если все продукты удалены, удаляем блок .popup-basket__complete-look
+            completeLookBlock.remove(); // Удаляем блок из DOM
+         }
+      });
+      observer.observe(completeLookBlock, { // Настроим наблюдатель
+         childList: true,   // Отслеживаем добавление и удаление дочерних элементов
+         subtree: true      // Отслеживаем изменения во всех подэлементах
+      });
+   }
+   trackCompleteLookBlock(); // Запускаем отслеживание блока .popup-basket__complete-look
+   /* <- Функция для отслеживания блока .popup-basket__complete-look (удаление в случае если все блоки popup-basket__product удалены) */
+
 });
