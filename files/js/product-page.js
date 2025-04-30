@@ -44,33 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
    }
    /* <- выбор размера */
 
-   /* действие по клику на кнопу Додати в кошик -> */
-   if (addToCartButton) {
-      addToCartButton.addEventListener('click', function() {
-         const dataSize = addToCartButton.getAttribute('data-size');
-         
-         function showPopup(popup) { // Функция для показа попапа
-            if (!popup) return;
-            popup.classList.add('open');
-            body.classList.add('lock');
-            setTimeout(() => {
-               popup.classList.remove('open');
-               setTimeout(() => { // Убираем lock через 600 мс после скрытия попапа
-                  body.classList.remove('lock');
-               }, 600);
-            }, 3000); // Попап виден 3 секунды
-         }
-         if (addToCartButton.hasAttribute('data-size')) {
-            if (dataSize.trim() === '') {
-               showPopup(popupSizeNotSelected); // Размер не выбран
-            } else {
-               showPopup(popupSuccess); // Размер выбран
-            }
-         }
-      });
-   }
-   /* <- действие по клику на кнопу Додати в кошик */
-
    /* действие по клику на кнопу Швидка покупка -> */
    if (quickPurchase) {
       quickPurchase.addEventListener('click', function(e) {

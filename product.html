@@ -6,9 +6,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250429015619" rel="stylesheet">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20250429015619">
-   <link rel="stylesheet" href="css/style.min.css?_v=20250429015619">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250430031231" rel="stylesheet">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20250430031231">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20250430031231">
+   <link rel="stylesheet" href="files/select2/css/select2-custom.css?_v=20250430031231">
+   <link rel="stylesheet" href="files/phonecode-master/phonecode.css?_v=20250430031231">
+   <link rel="stylesheet" href="css/style.min.css?_v=20250430031231">
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>Червоний вельветовий костюм - Andreas Moskin</title>
 </head>
@@ -24,7 +27,7 @@
 	<div class="header__wrapper lock-padding">
 		<div id="header-container" class="n_container header-container">
 			<div class="header__blockLogo">
-				<a href="/andreas-moskin/"><img src="images/svg/logo.svg" alt=""></a>
+				<a href="/"><img src="images/svg/logo.svg" alt=""></a>
 			</div>
 			<div class="header__menu menu">
 				<div class="menu__body">
@@ -86,7 +89,7 @@
 				<div class="header__icons">
 					<a href="#" class="heart-icon"><span>1</span></a>
 					<button type="button" class="search-icon"></button>
-					<a href="#" class="basket-icon"><span>1</span></a>
+					<a href="#popup-basket" id="basket-icon" class="basket-icon popup-link"></a>
 				</div>
 			</div>
 			<button type="button" class="menu__icon">
@@ -185,7 +188,7 @@
 										</div>
 										<div class="product__actions-buttons">
 											<a id="product-choose-size" href="#popup-product-choose-size" class="product__actions-button popup-link">Обрати розмір</a>
-											<button id="add-to-cart" type="button" class="product__actions-button add-to-cart" data-name="Червоний вельветовий костюм" data-size>Додати в кошик</button>
+											<button id="add-to-cart" type="button" class="product__actions-button add-to-cart" data-name="Чорний вельветовий костюм" data-color="Чорний" data-code="2034" data-size data-image="http://localhost:3000/images/product-slide-img-1.jpg" data-price="43 564 uah">Додати в кошик</button>
 											<a id="quick-purchase" href="#" class="product__actions-button quick-purchase" data-size>Швидка покупка</a>
 										</div>
 										<p class="product__free-shipping">БЕЗКОШТОВНА ДОСТАВКА</p>
@@ -614,6 +617,89 @@
    </div>
 </footer>
 
+<div id="popup-product-choose-size" class="popup popup-choose-size">
+   <div class="n_container">
+      <div class="popup__body">
+         <div class="popup__content">
+            <!--<a href="" class="popup__close close-popup">X</a>-->
+            <h3>Обрати розмір</h3>
+            <div class="popup__dimensions">
+               <label><input type="checkbox" value="48">48</label>
+               <label><input type="checkbox" value="50">50</label>
+               <label><input class="out-of-stock" type="checkbox" value="52">52</label>
+               <label><input class="out-of-stock" type="checkbox" value="54">54</label>
+               <label><input type="checkbox" value="56">56</label>
+               <label><input class="out-of-stock" type="checkbox" value="58">58</label>
+               <label><input type="checkbox" value="60">60</label>
+               <label><input type="checkbox" value="62">62</label>
+               <label><input type="checkbox" value="64">64</label>
+               <label><input type="checkbox" value="66">66</label>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div id="popup-product-notification-size-not-selected" class="popup popup-notification">
+   <div class="n_container">
+      <div class="popup__body">
+         <div class="popup__content">
+            <!--<a href="" class="popup__close close-popup">X</a>-->
+            <p><img src="images/popup-notification-icon-no.png" alt="icon">Розмір не вибраний</p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div id="popup-product-notification-successfully-added-to-cart" class="popup popup-notification">
+   <div class="n_container">
+      <div class="popup__body">
+         <div class="popup__content">
+            <!--<a href="" class="popup__close close-popup">X</a>-->
+            <p><img src="images/popup-notification-icon-yas.png" alt="icon">Успішно додано до кошика</p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div id="popup-you-are-in-cart" class="popup popup-notification">
+   <div class="n_container">
+      <div class="popup__body">
+         <div class="popup__content">
+            <!--<a href="" class="popup__close close-popup">X</a>-->
+            <p><img src="images/popup-notification-icon-yas.png" alt="icon">Ви вже додали цей товар до кошика</p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div id="popup-product-quick-purchase" class="popup popup-quick-purchase">
+   <div class="n_container">
+      <div class="popup__body">
+         <div class="popup__content">
+            <a href="" class="popup__close close-popup">
+               <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M1.05718 0.737651L4.35712 0.718701L8.01662 5.84577L11.617 0.677011L14.9609 0.657809L9.83348 8.07938L15.4674 16.0552L12.0794 16.0746L8.04328 10.4877L4.09356 16.1205L0.793614 16.1394L6.31417 8.20959L1.05718 0.737651Z" fill="black"/>
+               </svg>
+            </a>
+            <div class="popup__block">
+               <h3>1 ТОВАР НА СУМУ 43 564 UAH</h3>
+               <p>Введіть номер телефону і ми передзвонимо вам для обговорення деталей замовлення</p>
+               <form>
+                  <input type="text" placeholder="Ім’я">
+                  <input type="text" placeholder="Телефон">
+                  <input type="hidden" namе="product-name" value="Червоний вельветовий костюм">
+                  <input type="hidden" namе="product-code" value="2034">
+                  <input id="product-size" type="hidden" namе="product-size">
+                  <input type="hidden" namе="product-price" value="43 564 uah">
+                  <input type="submit" value="Оформити замовлення">
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
 <div class="wrap-block-with-currency-selection">
    <div class="block-with-currency-selection">
       <div class="n_container">
@@ -644,79 +730,90 @@
       </div>
    </div>
 </div>
+
+<div id="popup-basket" class="popup popup-basket">
+   <div class="n_container">
+      <div class="popup__body">
+         <div class="popup__content">
+            <a href="" class="popup__close close-popup">
+               <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M1.05718 0.737651L4.35712 0.718701L8.01662 5.84577L11.617 0.677011L14.9609 0.657809L9.83348 8.07938L15.4674 16.0552L12.0794 16.0746L8.04328 10.4877L4.09356 16.1205L0.793614 16.1394L6.31417 8.20959L1.05718 0.737651Z" fill="black"/>
+               </svg>
+            </a>
+            <form>
+               <div class="popup-basket__complete-look">
+                  <p class="popup-basket__complete-look-title"><i>Доповнити образ</i></p>
+                  <div class="popup-basket__product">
+                     <div class="popup-basket__productBlockImage">
+                        <img src="images/complete-your-look-1.jpg" alt="">
+                     </div>
+                     <div class="popup-basket__productInfo">
+                        <h3 class="basket-name">Чорний вельветовий костюм</h3>
+                        <div class="popup-basket__wrap-quantity-and-price">
+                           <div class="number">
+                              <span class="number__minus">-</span>
+                              <input class="number__input" type="text" value="0">
+                              <span class="number__plus">+</span>
+                           </div>
+                           <div class="popup-basket__wrap-price">
+                              <p class="basket-price">0 uah</p>
+                              <button type="button" class="basket-delete">х</button>
+                           </div>
+                        </div>
+                        <div class="popup-basket__wrap-list">
+                           <p class="popup__price hidden-mobile">43 564 uah</p>
+                           <ul>
+                              <li>Розмір <strong class="basket-size">52</strong></li>
+                              <li>Колір <strong class="basket-color">чорний</strong></li>
+                              <li>Код товар <strong class="basket-code">2032</strong></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="popup-basket__product">
+                     <div class="popup-basket__productBlockImage">
+                        <img src="images/complete-your-look-3.jpg" alt="">
+                     </div>
+                     <div class="popup-basket__productInfo">
+                        <h3 class="basket-name">Чорний вельветовий костюм</h3>
+                        <div class="popup-basket__wrap-quantity-and-price">
+                           <div class="number">
+                              <span class="number__minus">-</span>
+                              <input class="number__input" type="text" value="0">
+                              <span class="number__plus">+</span>
+                           </div>
+                           <div class="popup-basket__wrap-price">
+                              <p class="basket-price">0 uah</p>
+                              <button type="button" class="basket-delete">х</button>
+                           </div>
+                        </div>
+                        <div class="popup-basket__wrap-list">
+                           <p class="popup__price hidden-mobile">43 564 uah</p>
+                           <ul>
+                              <li>Розмір <strong class="basket-size">52</strong></li>
+                              <li>Колір <strong class="basket-color">чорний</strong></li>
+                              <li>Код товар <strong class="basket-code">2032</strong></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <p class="popup-basket__total-amount">Загальна сума: <span>43 564 uah</span></p>
+               <input type="submit" data-total-amount="43 564 uah" value="ОФОРМИТИ ЗАМОВЛЕННЯ">
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script src="files/js/jquery-3.6.1.min.js?_v=20250430031231"></script>
+<script src="files/minus-and-plus-for-input-field/js/script.js?_v=20250430031231"></script>
+<script src="files/js/basket.js?_v=20250430031231"></script>
 	</div>
 
-	<div id="popup-product-choose-size" class="popup popup-choose-size">
-		<div class="n_container">
-			<div class="popup__body">
-				<div class="popup__content">
-					<!--<a href="" class="popup__close close-popup">X</a>-->
-					<h3>Обрати розмір</h3>
-					<div class="popup__dimensions">
-						<label><input type="checkbox" value="48">48</label>
-						<label><input type="checkbox" value="50">50</label>
-						<label><input class="out-of-stock" type="checkbox" value="52">52</label>
-						<label><input class="out-of-stock" type="checkbox" value="54">54</label>
-						<label><input type="checkbox" value="56">56</label>
-						<label><input class="out-of-stock" type="checkbox" value="58">58</label>
-						<label><input type="checkbox" value="60">60</label>
-						<label><input type="checkbox" value="62">62</label>
-						<label><input type="checkbox" value="64">64</label>
-						<label><input type="checkbox" value="66">66</label>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="popup-product-notification-size-not-selected" class="popup popup-notification">
-		<div class="n_container">
-			<div class="popup__body">
-				<div class="popup__content">
-					<!--<a href="" class="popup__close close-popup">X</a>-->
-					<p><img src="images/popup-notification-icon-no.png" alt="icon">Розмір не вибраний</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="popup-product-notification-successfully-added-to-cart" class="popup popup-notification">
-		<div class="n_container">
-			<div class="popup__body">
-				<div class="popup__content">
-					<!--<a href="" class="popup__close close-popup">X</a>-->
-					<p><img src="images/popup-notification-icon-yas.png" alt="icon">Успішно додано до кошика</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div id="popup-product-quick-purchase" class="popup popup-quick-purchase">
-		<div class="n_container">
-			<div class="popup__body">
-				<div class="popup__content">
-					<!--<a href="" class="popup__close close-popup">X</a>-->
-					<div class="popup__block">
-						<h3>1 ТОВАР НА СУМУ 43 564 UAH</h3>
-						<p>Введіть номер телефону і ми передзвонимо вам для обговорення деталей замовлення</p>
-						<form>
-							<input type="text" placeholder="Ім’я">
-							<input type="text" placeholder="Телефон">
-							<input type="hidden" namе="product-name" value="Червоний вельветовий костюм">
-							<input type="hidden" namе="product-code" value="2034">
-							<input id="product-size" type="hidden" namе="product-size">
-							<input type="hidden" namе="product-price" value="43 564 uah">
-							<input type="submit" value="Оформити замовлення">
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-   <script src="js/script.min.js?_v=20250429015619"></script>
-	<script src="files/swiper/js/swiper-bundle.min.js?_v=20250429015619"></script>
-	<script src="files/swiper/js/init.js?_v=20250429015619"></script>
-	<script src="files/js/product-page.js?_v=20250429015619"></script>
+   <script src="js/script.min.js?_v=20250430031231"></script>
+	<script src="files/swiper/js/swiper-bundle.min.js?_v=20250430031231"></script>
+	<script src="files/swiper/js/init.js?_v=20250430031231"></script>
+	<script src="files/js/product-page.js?_v=20250430031231"></script>
 </body>
 </html>
