@@ -27,4 +27,12 @@ $(document).ready(function () { // Make sure the DOM is fully loaded before init
       placeholder: "Выберите місто",
       theme: 'order-placement-select'
    });
+   $('#select-time').select2({
+      placeholder: "Выберите час",
+      theme: 'order-placement-select'
+   });
+   $('#select-date').select2({
+      placeholder: "Выберите дату",
+      theme: 'order-placement-select'
+   });
 });
