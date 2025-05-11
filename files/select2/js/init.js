@@ -35,4 +35,8 @@ $(document).ready(function () { // Make sure the DOM is fully loaded before init
       placeholder: "Выберите дату",
       theme: 'order-placement-select'
    });
+   $('#select-number-of-units').select2({
+      placeholder: "Выберите кількість",
+      theme: 'order-placement-select'
+   });
 });
