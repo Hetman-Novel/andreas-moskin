@@ -24,19 +24,33 @@ $(document).ready(function () { // Make sure the DOM is fully loaded before init
       theme: 'order-placement-select'
    });
    $('#select-city').select2({
-      placeholder: "Выберите місто",
+      placeholder: "Виберіть місто",
       theme: 'order-placement-select'
    });
    $('#select-time').select2({
-      placeholder: "Выберите час",
+      placeholder: "Виберіть час",
       theme: 'order-placement-select'
    });
    $('#select-date').select2({
-      placeholder: "Выберите дату",
+      placeholder: "Виберіть дату",
       theme: 'order-placement-select'
    });
    $('#select-number-of-units').select2({
-      placeholder: "Выберите кількість",
+      placeholder: "Виберіть кількість",
       theme: 'order-placement-select'
    });
+});
+
+const phoneInput = document.getElementById('phone');
+
+phoneInput.addEventListener('input', function (e) {
+  let numbers = this.value.replace(/\D/g, '').substring(0, 9); // только цифры, не более 9
+
+  let formatted = '';
+  if (numbers.length > 0) formatted = '(' + numbers.substring(0, 2);
+  if (numbers.length >= 3) formatted += ') ' + numbers.substring(2, 5);
+  if (numbers.length >= 6) formatted += '-' + numbers.substring(5, 7);
+  if (numbers.length >= 8) formatted += '-' + numbers.substring(7, 9);
+
+  this.value = formatted;
 });
