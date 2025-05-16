@@ -726,9 +726,10 @@ a {
 
 .block-with-currency-selection__button {
   background-color: #FFF9F9;
-  height: 61px;
+  color: #000 !important;
   font-size: 20px;
   font-weight: 500;
+  height: 61px;
   transition: 0.3s ease 0s;
   text-align: center;
   width: 377px;
@@ -1270,6 +1271,7 @@ a {
 .block__title {
   background-color: transparent !important;
   border: none;
+  color: #000 !important;
   font-size: 22px;
   font-weight: 600;
   line-height: 1.4;
@@ -3163,6 +3165,10 @@ body._touch .header .menu__list {
   margin-top: 58px;
 }
 
+.section-sale__item h3 a {
+  text-decoration: none;
+}
+
 .section-sale__item .price {
   margin-top: 27px;
 }
@@ -4527,6 +4533,7 @@ body._touch .header .menu__list {
   line-height: 100%;
   margin: 21px 0;
   outline: none;
+  transition: 0.3s ease 0s;
   text-align: center;
   width: 100%;
 }
@@ -5413,6 +5420,7 @@ body._touch .header .menu__list {
   height: 71px;
   line-height: 71px;
   margin-top: 85px;
+  transition: 0.3s ease 0s;
 }
 
 .block-form p {
@@ -9824,11 +9832,11 @@ body._touch .header .menu__list {
 
   .block__content p img {
     bottom: 2px;
-    height: 18px;
+    height: 19px;
     margin-left: auto;
     margin-right: 7px;
     position: relative;
-    width: auto;
+    width: 19px;
   }
 
   .block__content p a.there-is-parking {
@@ -10071,8 +10079,8 @@ body._touch .header .menu__list {
   }
 
   .header__blockLogo {
-    min-width: 170px;
-    max-width: 170px;
+    min-width: 172px;
+    max-width: 172px;
   }
 
   .header__icons a.heart-icon,
@@ -10186,6 +10194,7 @@ body._touch .header .menu__list {
     flex-direction: column-reverse;
     bottom: 76px;
     top: auto;
+    display: none;
   }
 
   .first-screen__wrap-message-icon p {
@@ -11698,6 +11707,14 @@ body._touch .header .menu__list {
   .product__actions-button:hover {
     background-color: #868686;
     color: #fff;
+  }
+
+  .order-placement__submit:hover {
+    background-color: #c7c7c7 !important;
+  }
+
+  .block-form form input[type=submit]:hover {
+    background-color: #c7c7c7 !important;
   }
 }
 
