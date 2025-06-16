@@ -6,12 +6,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250512230027" rel="stylesheet">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20250512230027">
-   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20250512230027">
-   <link rel="stylesheet" href="files/select2/css/select2-custom.css?_v=20250512230027">
-   <link rel="stylesheet" href="files/phonecode-master/phonecode.css?_v=20250512230027">
-   <link rel="stylesheet" href="css/style.min.css?_v=20250512230027">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250616160517" rel="stylesheet">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20250616160517">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20250616160517">
+   <link rel="stylesheet" href="files/select2/css/select2-custom.css?_v=20250616160517">
+   <link rel="stylesheet" href="files/phonecode-master/phonecode.css?_v=20250616160517">
+   <link rel="stylesheet" href="files/tabs/style.css?_v=20250616160517">
+   <link rel="stylesheet" href="css/style.min.css?_v=20250616160517">
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>Таблиця для визначення розміру - Andreas Moskin</title>
 </head>
@@ -276,8 +277,14 @@
 	</div>
 </header>
 		<main class="main page">
-         <div class="n_container">
-            <h1 class="page__title">Таблиця для визначення розміру</h1>
+         <div class="n_container tabs">
+            <div class="size-chart__wrap-title">
+               <h1 class="page__title">Таблиця для визначення розміру</h1>
+               <div class="size-chart__wrap-buttons tabs__wrap-tab">
+                  <a data-tab="tab1" href="#" class="tab tab-active">Таблиця розмірів від 46 до 66</a>
+                  <a data-tab="tab2" href="#" class="tab">Таблиця розмірів від XS до 7XL</a>
+               </div>
+            </div>
             <div class="size-chart__items">
                <div class="size-chart__item">
                   <div class="size-chart-table">
@@ -303,7 +310,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="size-chart-table__body">
+                     <div data-tabcontent="tab1" class="size-chart-table__body tabContent content-active">
                         <div class="size-chart-table__row">
                            <div class="size-chart-table__th">
                               <p>46</p>
@@ -522,6 +529,228 @@
                            </div>
                            <div class="size-chart-table__td">
                               <p>46</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div data-tabcontent="tab2" class="size-chart-table__body tabContent">
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
+                           </div>
+                        </div>
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
+                           </div>
+                        </div>
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
+                           </div>
+                        </div>
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
+                           </div>
+                        </div>
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
+                           </div>
+                        </div>
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
+                           </div>
+                        </div>
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
+                           </div>
+                        </div>
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
+                           </div>
+                        </div>
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
+                           </div>
+                        </div>
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
+                           </div>
+                        </div>
+                        <div class="size-chart-table__row">
+                           <div class="size-chart-table__th">
+                              <p>2XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>3XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>4XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>5XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>6XL</p>
+                           </div>
+                           <div class="size-chart-table__td">
+                              <p>7XL</p>
                            </div>
                         </div>
                      </div>
@@ -954,10 +1183,11 @@
    </div>
 </div>
 
-<script src="files/js/jquery-3.6.1.min.js?_v=20250512230027"></script>
-<script src="files/minus-and-plus-for-input-field/js/script.js?_v=20250512230027"></script>
-<script src="files/js/basket.js?_v=20250512230027"></script>
+<script src="files/js/jquery-3.6.1.min.js?_v=20250616160517"></script>
+<script src="files/minus-and-plus-for-input-field/js/script.js?_v=20250616160517"></script>
+<script src="files/js/basket.js?_v=20250616160517"></script>
 	</div>
-   <script src="js/script.min.js?_v=20250512230027"></script>
+   <script src="js/script.min.js?_v=20250616160517"></script>
+   <script src="files/tabs/script.js?_v=20250616160517"></script>
 </body>
 </html>
