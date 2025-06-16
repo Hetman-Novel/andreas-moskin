@@ -4534,16 +4534,19 @@ body._touch .header .menu__list {
   width: 50px;
 }
 
+.order-placement__wrap-buttons label input[type=checkbox],
 .order-placement__wrap-buttons label input[type=radio] {
   display: block;
 }
 
+.order-placement__wrap-buttons label input[type=checkbox]:checked::before,
 .order-placement__wrap-buttons label input[type=radio]:checked::before {
   background: #E5E5E5 url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.15969 9.38V0.62H5.83969V9.38H4.15969ZM0.519688 5.8V4.22H9.47969V5.8H0.519688Z' fill='black'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.order-placement__wrap-buttons label input[type=checkbox]::before,
 .order-placement__wrap-buttons label input[type=radio]::before {
   background: #FCFCFC url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='3' viewBox='0 0 6 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.311875 2.34V0.68H5.69188V2.34H0.311875Z' fill='black'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
