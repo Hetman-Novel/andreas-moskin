@@ -1,0 +1,21 @@
+.tab {
+   display: inline-block;
+   cursor: pointer;
+}
+.tab.tab-active {
+   pointer-events: none;
+}
+.tabContent {
+   height: 0;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 0s ease 0s;
+   visibility: hidden;
+}
+.tabContent.content-active {
+   height: auto;
+   pointer-events: all;
+   opacity: 1;
+   transition: opacity 0.1s ease 0s;
+   visibility: visible;
+}
