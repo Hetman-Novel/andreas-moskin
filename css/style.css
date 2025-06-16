@@ -1052,6 +1052,7 @@ a {
   margin: 17px 0 57px !important;
 }
 
+.page__content li,
 .page__content p {
   font-size: 40px;
   font-weight: 400;
@@ -1060,8 +1061,19 @@ a {
   margin-top: 53px !important;
 }
 
+.page__content li strong,
 .page__content p strong {
   font-weight: 500;
+}
+
+.page__content ol,
+.page__content ul {
+  margin-bottom: 73px;
+  padding-left: 55px;
+}
+
+.page__content li {
+  margin: 35px 0 !important;
 }
 
 /*
@@ -7074,10 +7086,20 @@ body._touch .header .menu__list {
     margin-top: 80px;
   }
 
+  .page__content li,
   .page__content p {
     font-size: 32px;
     margin-bottom: 45px !important;
     margin-top: 45px !important;
+  }
+
+  .page__content ol,
+  .page__content ul {
+    margin-bottom: 45px;
+  }
+
+  .page__content li {
+    margin: 28px 0 !important;
   }
 
   .header__right .select {
@@ -7767,10 +7789,21 @@ body._touch .header .menu__list {
     margin: 15px 0 45px !important;
   }
 
+  .page__content li,
   .page__content p {
     font-size: 24px;
     margin-bottom: 36px !important;
     margin-top: 36px !important;
+  }
+
+  .page__content ol,
+  .page__content ul {
+    margin-bottom: 33px;
+    padding-left: 35px;
+  }
+
+  .page__content li {
+    margin: 20px 0 !important;
   }
 
   .block__title {
@@ -8725,6 +8758,7 @@ body._touch .header .menu__list {
     width: 5px;
   }
 
+  .page__content li,
   .page__content p {
     font-size: 18px;
   }
@@ -9360,6 +9394,7 @@ body._touch .header .menu__list {
     font-size: 14px;
   }
 
+  .page__content li,
   .page__content p {
     font-size: 16px;
   }
@@ -9886,8 +9921,18 @@ body._touch .header .menu__list {
     margin: 12px 0 0 !important;
   }
 
+  .page__content li,
   .page__content p {
     font-size: 14px;
+  }
+
+  .page__content ol,
+  .page__content ul {
+    padding-left: 25px;
+  }
+
+  .page__content li {
+    margin: 15px 0 !important;
   }
 
   .block-first {
