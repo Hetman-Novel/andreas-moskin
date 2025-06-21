@@ -6,13 +6,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250617130317" rel="stylesheet">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20250617130317">
-   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20250617130317">
-   <link rel="stylesheet" href="files/select2/css/select2-custom.css?_v=20250617130317">
-   <link rel="stylesheet" href="files/phonecode-master/phonecode.css?_v=20250617130317">
-   <link rel="stylesheet" href="files/tabs/style.css?_v=20250617130317">
-   <link rel="stylesheet" href="css/style.min.css?_v=20250617130317">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250621190954" rel="stylesheet">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20250621190954">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20250621190954">
+   <link rel="stylesheet" href="files/select2/css/select2-custom.css?_v=20250621190954">
+   <link rel="stylesheet" href="files/phonecode-master/phonecode.css?_v=20250621190954">
+   <link rel="stylesheet" href="files/tabs/style.css?_v=20250621190954">
+   <link rel="stylesheet" href="css/style.min.css?_v=20250621190954">
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>КОНТАКТИ - Andreas Moskin</title>
 </head>
@@ -382,10 +382,63 @@
          <p>Ваш одяг Andreas Moskin завжди буде в порядку завдяки нашому ательє. Підкорегувати згідно параметрів вашої фігури, відпрасувати чи здати у хімчистку - завжди доступно для Вас.</p>
          <h5>ВІДЕОКОНСУЛЬТАЦІЯ</h5>
          <p>Персональний відеодзвінок із провідним стилістом Andreas Moskin. Від консультації по стилю до підготовки до особливого заходу або церемонії: кравецькі послуги для задоволення будь-яких Ваших запитів.Можливість онлайн разом обрати відповідний одяг, який буде доставлений Вам додому.</p>
-         <a href="#" class="block-with-two-columns__link">ЗАМОВИТИ ПОСЛУГУ</a>
+         <!--<a href="#" class="block-with-two-columns__link">ЗАМОВИТИ ПОСЛУГУ</a>-->
       </div>
    </div>
 </div>
+				<section class="ordering-services">
+					<h2>ЗАМОВЛЕННЯ ПОСЛУГ</h2>
+					<form>
+						<div class="ordering-services__wrap-fields">
+							<div class="ordering-services__wrap-field">
+								<label>Ваше ім’я</label>
+								<input type="text">
+							</div>
+							<div class="ordering-services__wrap-field">
+								<label>Місто</label>
+								<select id="select-city">
+									<option selected></option>
+									<option value="Львів">Львів</option>
+									<option value="Київ">Київ</option>
+									<option value="Луцьк">Луцьк</option>
+									<option value="Івано-Франківськ">Івано-Франківськ</option>
+									<option value="Харків">Харків</option>
+									<option value="Дніпро">Дніпро</option>
+									<option value="Одеса">Одеса</option>
+									<option value="Чернівці">Чернівці</option>
+									<option value="Вінниця">Вінниця</option>
+									<option value="Полтава">Полтава</option>
+									<option value="Чернігів">Чернігів</option>
+									<option value="Тернопіль">Тернопіль</option>
+									<option value="Черкаси">Черкаси</option>
+									<option value="Рівне">Рівне</option>
+									<option value="Кривий Ріг">Кривий Ріг</option>
+									<option value="Кременчук">Кременчук</option>
+									<option value="Суми">Суми</option>
+									<option value="Бровари">Бровари</option>
+									<option value="Калуш">Калуш</option>
+									<option value="Коломия">Коломия</option>
+									<option value="Ковель">Ковель</option>
+									<option value="Конотоп">Конотоп</option>
+									<option value="Миргород">Миргород</option>
+									<option value="Кам’янське">Кам’янське</option>
+									<option value="Бердичів">Бердичів</option>
+									<option value="Житомир">Житомир</option>
+									<option value="Чорноморськ">Чорноморськ</option>
+								</select>
+							</div>
+							<div class="ordering-services__wrap-field phone">
+								<label>Ваш номер телефону</label>
+								<input type="text" id="phone" name="phone" autofocus="true" placeholder="(99) 999-99-99">
+							</div>
+							<button type="submit" class="ordering-services__submit">ЗАЛИШИТИ КОНТАКТИ</button>
+						</div>
+					</form>
+					<p class="ordering-services__notification-after-sending">
+						<span class="desktop">ДЯКУЄМО! НАШ МЕНЕДЖЕР ЗВ’ЯЖЕТЬСЯ ІЗ ВАМИ НАЙБЛИЖЧИМ ЧАСОМ.</span>
+						<span class="mobile">ДЯКУЄМО, ЩО ЗАПИСАЛИСЯ. НАШ МЕНЕДЖЕР ЗВ’ЯЖЕТЬСЯ ІЗ ВАМИ НАЙБЛИЖЧИМ ЧАСОМ.</span>
+					</p>
+				</section>
          </div>
       </main>
 		<footer class="footer">
@@ -793,11 +846,27 @@
    </div>
 </div>
 
-<script src="files/js/jquery-3.6.1.min.js?_v=20250617130317"></script>
-<script src="files/minus-and-plus-for-input-field/js/script.js?_v=20250617130317"></script>
-<script src="files/js/basket.js?_v=20250617130317"></script>
+<script src="files/js/jquery-3.6.1.min.js?_v=20250621190954"></script>
+<script src="files/minus-and-plus-for-input-field/js/script.js?_v=20250621190954"></script>
+<script src="files/js/basket.js?_v=20250621190954"></script>
 	</div>
 
-   <script src="js/script.min.js?_v=20250617130317"></script>
+   <script src="js/script.min.js?_v=20250621190954"></script>
+   <script src="files/select2/js/select2.min.js?_v=20250621190954"></script>
+   <script src="files/select2/js/init.js?_v=20250621190954"></script>
+   <script src="files/phonecode-master/phonecode.js?_v=20250621190954"></script>
+   <script src="files/phonecode-master/jquery-ui-1.10.4.custom.min.js?_v=20250621190954"></script>
+   <script src="files/phonecode-master/counties.js?_v=20250621190954"></script>
+   <script src="files/phonecode-master/phonecode.js?_v=20250621190954"></script>
+   <script>
+      $(function(){
+         $('#phone').phonecode({
+            preferCo: 'ua',
+            defaultCountry: 'ua',
+            preferedCountries: ['ee', 'ua', 'ru'],
+            placeholder: '(99) 999-99-99'
+         });
+      });
+  </script>
 </body>
 </html>
