@@ -2368,7 +2368,7 @@ body.lock {
 
 .header__icons a.search-icon,
 .header__icons button.search-icon {
-  background-image: url("../images/search-icon.png");
+  background-image: url("../images/svg/search-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -2380,14 +2380,14 @@ body.lock {
 
 .header__icons a.basket-icon,
 .header__icons button.basket-icon {
-  background-image: url("../images/basket-icon.png");
+  background-image: url("../images/svg/basket-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   bottom: 2px;
-  height: 23px;
+  height: 26px;
   position: relative;
-  width: 19px;
+  width: 22px;
 }
 
 .header__icons a span,
@@ -2450,7 +2450,7 @@ body.lock {
 }
 
 .header__blockForm form input[type=submit] {
-  background-image: url(../images/search-icon.png);
+  background-image: url(../images/svg/search-icon.svg);
   background-size: 25px;
   background-repeat: no-repeat;
   background-position: center;
@@ -5760,7 +5760,7 @@ body._touch .header .menu__list {
 }
 
 .footer__social li.instagram-icon a {
-  background: url("../images/instagram-icon.png");
+  background: url("../images/svg/instagram-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -5768,7 +5768,7 @@ body._touch .header .menu__list {
 
 .footer__social li.in-icon a {
   align-items: center;
-  background: url("../images/in-icon.png");
+  background: url("../images/svg/in-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -5776,7 +5776,7 @@ body._touch .header .menu__list {
 
 .footer__social li.youtube-icon a {
   align-items: center;
-  background: url("../images/youtube-icon.png");
+  background: url("../images/svg/youtube-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -5784,7 +5784,7 @@ body._touch .header .menu__list {
 
 .footer__social li.whatsapp-icon a {
   align-items: center;
-  background: url("../images/whatsapp-icon.png");
+  background: url("../images/svg/whatsapp-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -6367,8 +6367,8 @@ body._touch .header .menu__list {
 
   .header__icons a.basket-icon,
   .header__icons button.basket-icon {
-    height: 20px;
-    width: 16px;
+    height: 21px;
+    width: 25px;
   }
 
   .header__blockForm {
@@ -7076,8 +7076,8 @@ body._touch .header .menu__list {
 
   .header__icons a.basket-icon,
   .header__icons button.basket-icon {
-    height: 23px;
-    width: 19px;
+    height: 27px;
+    width: 23px;
   }
 
   .header .menu {
@@ -10652,9 +10652,9 @@ body._touch .header .menu__list {
 
   .header__icons a.basket-icon,
   .header__icons button.basket-icon {
-    height: 17px;
+    height: 21px;
     order: -1;
-    width: 13px;
+    width: 17px;
   }
 
   .header__icons a.basket-icon span,
